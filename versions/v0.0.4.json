@@ -1,0 +1,475 @@
+{
+  "uuid": "",
+  "release": "v0.0.4",
+  "apps": [
+    {
+      "name": "driver-bacnet",
+      "repo": "driver-bacnet",
+      "description": "a bacnet server",
+      "port": 47808,
+      "transport": "udp",
+      "exec_start": "app",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [
+        "g=/data/driver-bacnet",
+        "s=config.yml"
+      ],
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "min_version": "v0.0.26",
+      "max_version": "",
+      "flow_dependency": false,
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ],
+      "match_name": false,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    },
+    {
+      "name": "driver-rubix-compute-io",
+      "repo": "driver-rubix-compute-io",
+      "description": "rubix compute io driver",
+      "port": 5001,
+      "transport": "http",
+      "exec_start": "app -p 5001 -r <root_dir> -a <data_dir_name> -d data -c config --prod server",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [],
+      "products": [
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "armv7"
+      ],
+      "min_version": "v0.1.0",
+      "max_version": "",
+      "flow_dependency": true,
+      "plugin_dependency": [
+        "rubixio"
+      ],
+      "service_dependency": [
+        "pigpi"
+      ],
+      "match_name": false,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    },
+    {
+      "name": "driver-lora",
+      "repo": "driver-lora",
+      "description": "lora driver",
+      "transport": "serial",
+      "exec_start": "app -p <port> -g <data_dir> -d data -c config -i <identifier> -s config.json -l logging.conf --prod",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [],
+      "products": [
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "armv7"
+      ],
+      "min_version": "v1.0.0",
+      "max_version": "",
+      "flow_dependency": true,
+      "plugin_dependency": [
+        "lora"
+      ],
+      "service_dependency": [
+        "socat"
+      ],
+      "match_name": false,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    },
+    {
+      "name": "driver-edge-28",
+      "repo": "driver-edge-28",
+      "description": "edge-28 driver",
+      "port": 5000,
+      "transport": "http",
+      "exec_start": "app -p 5000 -g <data_dir> -d data -c config -i <identifier> -s config.json -l logging.conf --prod",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [],
+      "products": [
+        "edge-28"
+      ],
+      "arch": [
+        "armv7"
+      ],
+      "min_version": "v0.0.2",
+      "max_version": "",
+      "flow_dependency": true,
+      "plugin_dependency": [
+        "edge28"
+      ],
+      "service_dependency": [
+      ],
+      "match_name": false,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    },
+    {
+      "name": "lorawan-modbus-bridge",
+      "repo": "lorawan-modbus-bridge",
+      "description": "LoRaWAN Modbus Bridge",
+      "port": 1111,
+      "transport": "http",
+      "exec_start": "app -p 1111 -g /data/lorawan-modbus-bridge -d data -c config -i N/A -s config.json -l logging.conf --prod",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [],
+      "products": [
+        "cloud",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "min_version": "v1.0.0",
+      "max_version": "",
+      "flow_dependency": true,
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ],
+      "match_name": false,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    },
+    {
+      "name": "rubix-edge-wires",
+      "repo": "rubix-edge-wires",
+      "description": "A backend server for flow engine",
+      "port": 1665,
+      "transport": "http",
+      "exec_start": "app -p 1665 -r <root_dir> -a <data_dir_name> -d data -c config --prod server",
+      "attach_working_dir_on_exec_start": true,
+      "environment_vars": [],
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "min_version": "v0.1.9",
+      "max_version": "",
+      "flow_dependency": false,
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ],
+      "match_name": true,
+      "is_zipball": false,
+      "do_not_validate_arch": false,
+      "move_extracted_file_to_name_app": true,
+      "move_one_level_inside_file_to_outside": false
+    }
+  ],
+  "plugins": [
+    {
+      "name": "system",
+      "plugin": "system",
+      "description": "system plugin is used for scheduling and a generic network, device and points",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": [
+      ],
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "history",
+      "plugin": "history",
+      "description": "used for storing histories",
+      "transport": "na",
+      "products": [
+        "cloud",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": [
+      ],
+      "plugin_dependency": [
+        "history"
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "postgres",
+      "plugin": "postgres",
+      "port": 5432,
+      "transport": "tcp",
+      "description": "used to sync flow-framework data into postgres database",
+      "products": [
+        "cloud",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": [
+      ],
+      "plugin_dependency": [
+        "history"
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "bacnet-master",
+      "plugin": "bacnetmaster",
+      "description": "a bacnet master plugin",
+      "port": 47808,
+      "transport": "udp",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": [
+      ],
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "lora",
+      "plugin": "lora",
+      "description": "nube lora protocol",
+      "transport": "serial",
+      "products": [
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "armv7"
+      ],
+      "app_dependency": [
+        "lora-driver"
+      ],
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "edge-28",
+      "plugin": "edge28",
+      "description": "nube edge-28 protocol",
+      "port": 5000,
+      "transport": "http",
+      "products": [
+        "edge-28"
+      ],
+      "arch": [
+        "armv7"
+      ],
+      "app_dependency": [
+        "driver-edge-28"
+      ],
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+      ]
+    },
+    {
+      "name": "lorawan",
+      "plugin": "lorawan",
+      "description": "nube lorawan",
+      "port": 1883,
+      "transport": "mqtt",
+      "products": [
+        "cloud",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": [
+      ],
+      "plugin_dependency": [
+      ],
+      "service_dependency": [
+        "chripstack",
+        "mqtt"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "name": "lorawan-gateway",
+      "service_name": "lorawan-gateway.service",
+      "description": "LoraWAN Gateway",
+      "port": 0,
+      "transport": "",
+      "products": [
+        "cloud",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ]
+    },
+    {
+      "name": "lorawan-server",
+      "service_name": "lorawan-server.service",
+      "description": "LoraWAN Server",
+      "port": 0,
+      "transport": "",
+      "products": [
+        "cloud",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ]
+    },
+    {
+      "name": "mqtt-broker",
+      "service_name": "mosquitto.service",
+      "description": "a local mqtt broker",
+      "port": 1883,
+      "transport": "mqtt",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ]
+    },
+    {
+      "name": "openvpn",
+      "service_name": "openvpn@client.service",
+      "description": "a openvpn client",
+      "port": 0,
+      "transport": "tcp",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ]
+    },
+    {
+      "name": "rubix-compute-io-pi-dependency",
+      "service_name": "pigpiod.service",
+      "description": "used for the rubix-compute-io driver",
+      "port": 8888,
+      "transport": "tcp",
+      "products": [
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ]
+    }
+  ],
+  "firmware": [
+    {
+      "name": "io-16",
+      "repo": "rubix-io-fw",
+      "description": "firmware for the io-16",
+      "min_version": "v3.0",
+      "max_version": ""
+    }
+  ]
+}
