@@ -434,6 +434,19 @@
         "amd64"
       ],
       "app_dependency": []
+    },
+    {
+      "name": "module-oem-dch",
+      "repo": "module-oem-dch",
+      "description": "CSIRO Data Clearing House MQTT integration",
+      "transport": "",
+      "products": [
+        "cloud"
+      ],
+      "arch": [
+        "amd64"
+      ],
+      "app_dependency": []
     }
   ],
   "services": [
