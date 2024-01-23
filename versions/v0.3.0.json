@@ -460,8 +460,8 @@
       "app_dependency": []
     },
     {
-      "name": "module-core-loraraw",
-      "repo": "module-core-loraraw",
+      "name": "module-core-lorawan",
+      "repo": "module-core-lorawan",
       "description": "LoRaWAN Protocol",
       "transport": "serial",
       "products": [
@@ -558,7 +558,7 @@
     {
       "name": "lorawan-gateway",
       "service_name": "lorawan-gateway.service",
-      "description": "LoraWAN Gateway",
+      "description": "LoRaWAN Gateway",
       "port": 0,
       "transport": "",
       "products": [
@@ -575,7 +575,7 @@
     {
       "name": "lorawan-server",
       "service_name": "lorawan-server.service",
-      "description": "LoraWAN Server",
+      "description": "LoRaWAN Server",
       "port": 0,
       "transport": "",
       "products": [
