@@ -200,37 +200,6 @@
       "do_not_validate_arch": false,
       "move_extracted_file_to_name_app": true,
       "move_one_level_inside_file_to_outside": false
-    },
-    {
-      "name": "rubix-rx",
-      "repo": "rubix-rx",
-      "description": "A backend server for reactive flow",
-      "port": 1770,
-      "transport": "http",
-      "exec_start": "app -p 1770 -r <root_dir> -a <data_dir_name> -d data -c config --prod server",
-      "attach_working_dir_on_exec_start": true,
-      "environment_vars": [],
-      "products": [
-        "cloud",
-        "edge-28",
-        "rubix-compute",
-        "rubix-compute-vpn",
-        "rubix-compute-lorawan",
-        "rubix-compute-lorawan-vpn",
-        "rubix-compute-io"
-      ],
-      "min_version": "v0.0.1-rc1",
-      "max_version": "",
-      "flow_dependency": false,
-      "plugin_dependency": [
-      ],
-      "service_dependency": [
-      ],
-      "match_name": true,
-      "is_zipball": false,
-      "do_not_validate_arch": false,
-      "move_extracted_file_to_name_app": true,
-      "move_one_level_inside_file_to_outside": false
     }
   ],
   "plugins": [
