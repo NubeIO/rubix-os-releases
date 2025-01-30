@@ -545,7 +545,7 @@
     {
       "name": "module-oem-monthly-meter-data-csv-export",
       "repo": "module-oem-monthly-meter-data-csv-export",
-      "description": "Envizi monthly formatted CSV to an email endpoint",
+      "description": "Export total monthly meter usage CSV to an email endpoint",
       "transport": "",
       "products": [
         "cloud",
