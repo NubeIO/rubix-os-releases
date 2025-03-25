@@ -561,6 +561,26 @@
         "armv7"
       ],
       "app_dependency": []
+    },
+    {
+      "name": "module-oem-galvintmv",
+      "repo": "module-oem-galvintmv",
+      "description": "Galvin TMV project module",
+      "transport": "",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": []
     }
   ],
   "services": [
