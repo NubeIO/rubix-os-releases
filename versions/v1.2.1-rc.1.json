@@ -449,6 +449,26 @@
       "app_dependency": []
     },
     {
+      "name": "module-core-mapping",
+      "repo": "module-core-mapping",
+      "description": "Mapping across the different protocols",
+      "transport": "serial",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": []
+    },
+    {
       "name": "module-core-history",
       "repo": "module-core-history",
       "description": "Pull points histories into a history table",
