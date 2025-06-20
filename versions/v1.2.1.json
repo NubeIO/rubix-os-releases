@@ -563,6 +563,26 @@
       "app_dependency": []
     },
     {
+      "name": "module-oem-meter-data-csv-export-manual",
+      "repo": "module-oem-meter-data-csv-export",
+      "description": "Envizi formatted CSV to an email endpoint (manual)",
+      "transport": "",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": []
+    },
+    {
       "name": "module-oem-monthly-meter-data-csv-export",
       "repo": "module-oem-monthly-meter-data-csv-export",
       "description": "Export total monthly meter usage CSV to an email endpoint",
