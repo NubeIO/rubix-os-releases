@@ -538,7 +538,8 @@
         "cloud"
       ],
       "arch": [
-        "amd64"
+        "amd64",
+        "armv7"
       ],
       "app_dependency": []
     },
