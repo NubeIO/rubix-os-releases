@@ -1,6 +1,6 @@
 {
   "uuid": "",
-  "release": "v1.2.4",
+  "release": "v1.2.5",
   "apps": [
     {
       "name": "driver-bacnet",
