@@ -662,6 +662,19 @@
         "armv7"
       ],
       "app_dependency": []
+    },
+    {
+      "name": "module-oem-nem12",
+      "repo": "module-oem-nem12",
+      "description": "OEM NEM12",
+      "transport": "serial",
+      "products": [
+        "cloud"
+      ],
+      "arch": [
+        "amd64"
+      ],
+      "app_dependency": []
     }
   ],
   "services": [
