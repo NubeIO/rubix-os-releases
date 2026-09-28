@@ -664,10 +664,30 @@
       "app_dependency": []
     },
     {
+      "name": "module-oem-usrrouter",
+      "repo": "module-oem-usrrouter",
+      "description": "OEM USR Router",
+      "transport": "",
+      "products": [
+        "cloud",
+        "edge-28",
+        "rubix-compute",
+        "rubix-compute-vpn",
+        "rubix-compute-lorawan",
+        "rubix-compute-lorawan-vpn",
+        "rubix-compute-io"
+      ],
+      "arch": [
+        "amd64",
+        "armv7"
+      ],
+      "app_dependency": []
+    },
+    {
       "name": "module-oem-nem12",
       "repo": "module-oem-nem12",
       "description": "OEM NEM12",
-      "transport": "serial",
+      "transport": "",
       "products": [
         "cloud"
       ],
