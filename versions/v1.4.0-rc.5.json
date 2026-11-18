@@ -483,6 +483,19 @@
       "app_dependency": []
     },
     {
+      "name": "module-core-host-monitor",
+      "repo": "module-core-host-monitor",
+      "description": "Gateway VPN uptime, certificate days and module versions",
+      "transport": "",
+      "products": [
+        "cloud"
+      ],
+      "arch": [
+        "amd64"
+      ],
+      "app_dependency": []
+    },
+    {
       "name": "module-core-postgres",
       "repo": "module-core-postgres",
       "description": "Store histories data into Postgres server",
